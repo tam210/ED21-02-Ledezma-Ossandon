@@ -26,7 +26,7 @@ Las comparaciones deben concretarse con hechos y datos, sin frases ambiguas o t�
 
 ### 1.1 Descripción del problema
 
-Dado el laboratorio describir como se entiende el problema bajo sus propias palabras.
+Para este proyecto se plantea la problematica de detectar rostros faciales usando C++ donde se tendra que crear una inteligenci artifial la cual detectara el rostro y por cada rostro detectado este se señalara en un recuadro de color 
 
 ### 1.2 Objetivos 
 
