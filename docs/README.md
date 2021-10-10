@@ -12,9 +12,7 @@
 
 ## Resumen 
 
-> Agregar un resumen que describa el trabajo realizado y sus resultados. (Entre 150 y 180 palabras)
-> Más cosas...
-> El resumen indicarlo como cita con el comando `>`
+> Como grupo se tuvieron varias instancias de aprendizaje en el transcurrir de las semanas, como primer objetivo fue crear un lugar donde poder tener contacto y crear reuniones al momento de estudiar o realizar trabajos en conjunto, la plataforma usada fue Discord debido a su propuesta de chat de voz y chat escrito, también se dio la tarea de entender y aplicar lo enseñado en clases sobre C y C++, luego se tuvo una instancia de aprendizaje sobre github ya que se nos presento como plataforma de desarrollo, pero como grupo fue una plataforma totalmente nueva debido a  eso se aprendió lo básico tanto la creación de nuevos archivos, carpetas, el funcionamiento de la plataforma y como interactuar con esta misma. Como ultimo objetivo como grupo se coordinó realizar la instalación de IDE y configuración de librerías openCV que se pidió con anterioridad y esto también trajo consigo una instancia de aprendizaje de esta plataforma igualmente nueva para el grupo.
 
 ## 1. Introducción
 
