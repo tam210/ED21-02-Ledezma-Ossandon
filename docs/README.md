@@ -24,30 +24,35 @@ La redacción debe ser formal y de modo impersonal. No se debe utlizar primera p
 
 Las comparaciones deben concretarse con hechos y datos, sin frases ambiguas o términos generales. Por ejemplo, nunca se debe redactar frases como "el método es mejor que el método B". Lo correcto es decir, el error promedio de el método A es de 5 %, correspondiendo a la mitad del error de 10% obtenido utilizando el método B". El tiempo verbal es usualmente presente. No se debe perder de vista que se está explicando ”como hacer algo”, en vez de ”qué se hizo”. Todo aspecto circunstancial es irrelevante para el documento. Por ejemplo, si se ha desarrollado en el laboratorio X, o en el curso Y, con el profesor Z, etc.
 
-### 1.1 Descripción del problema
+### 1.1 Descripción del problema (Revisar si esta bien)
 
-Para este proyecto se plantea la problematica de detectar rostros faciales usando C++ donde se tendra que crear una inteligenci artifial la cual detectara el rostro y por cada rostro detectado este se señalara en un recuadro de color 
+Para este proyecto se plantea la problemática de detectar rostros faciales usando C++ donde se dispondrá de un video en el cual circulan personas, se tendrá que crear una inteligencia artificial la cual detectara el rostro y por cada rostro detectado este se señalara en un recuadro de color rojo, agregado a eso se implementaran diferentes funciones tales como la cantidad de personas detectadas y el tiempo que estas personas están siendo detectadas, también se darán estadísticas derivadas del tiempo en el cual la persona está siendo detectada.
 
-### 1.2 Objetivos 
+### 1.2 Objetivos (Revisar si esta bien)
 
 **Objetivo General**
 
-El fin que se desea llegar. (Comenzar con un verbo: "Construir un sistema...", "Desarrollar un sistema...", etc)
+Construir un sistema el cual sea capas de detectar rostros faciales y de estos rostros entregar diferentes tipos de datos y estadísticas.
 
 **Objetivos específicos**
 
-1. Objetivo 1
-2. Objetivo 2
-3. Objetivos 3
+1. Implementar la detección del rostro.
+2. Señar el rostro detectado con un recuadro de un color rojo.
+3. Entregar a cada rostro detectado un código de identidad.
+4. Obtener las cinco identidades que más tiempo fueron detectados.
+5. Establecer e implementar intervalos de tiempo donde se arrojarán diferentes tipos de estadísticas y valores sobre las identidades.
+6. Crear una lista de las diferentes identidades detectadas.
+7. Implementar los intervalos de tiempo junto con los listados para ver las estadísticas y valores.
+
 
 Los objetivos específicos son acciones específicas que son desarrolladas para lograr cumplir el objetivo general, por ejemplo:
 
-1. Investigar  el  estado  del  arte  de  visión  por  computador  y  audio  para  resolver  tareas de  clasificación unimodal y multimodal aplicado  al  problema  de  reconocimiento  de emociones.
+(1. Investigar  el  estado  del  arte  de  visión  por  computador  y  audio  para  resolver  tareas de  clasificación unimodal y multimodal aplicado  al  problema  de  reconocimiento  de emociones.
 2.  Seleccionar  uno  o  dos  métodos  estudiados  en  el  estado  del  arte  para  la  estimación  de  laemoción utilizando datos unimodales o multimodales.
 3.  Implementar los métodos seleccionados utilizando el lenguaje de programación Python y laslibrerías suministradas por Pytorch.
 4.  Validar  los  resultados  por  medio  bases  de  datos  especializadas  para  el  desarrollo  deaplicaciones basadas en la estimación de la emoción y que incluyan varios modos de atributoscomo: imágenes, sonido y/o texto.
 5.  Proponer  mejoras  a  los  modelos  implementados  para  mejorar  su  desempeño  en  futurasimplementaciones o proyectos de investigación.
-6.  Difundir los resultados en medios científicos nacionales o internacionales.
+6.  Difundir los resultados en medios científicos nacionales o internacionales.)
 
 ### 1.3 Solución propuesta
 
