@@ -1,10 +1,27 @@
-# ED21-02-Ledezma-Ossandon
-Taller Estructura de Datos
-
-hola 
-hola 
-
-# ED21-02-Ledezma-Ossandon
+![UCN](docs/images/60x60-ucn-negro.png)
 
 
-hola
+# Proyecto: Detección y reidentificación de caras en secuencias de imágenes o video
+## Curso: Estructura de datos
+
+### Integrantes
+
+* Alumno 01 (Rol)
+* Alumno 02 (Rol)
+
+### Bitácora
+
+[Ver Bitácora](docs/BITACORA.md)
+
+### Resumen
+
+<Agregar el resumen del reporte técnico>
+
+<Colocar alguna imágen en la portada>
+
+### Documentos
+
+* [Reporte Técnico](docs/README.md)
+
+
+
