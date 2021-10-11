@@ -88,17 +88,61 @@ La primera linea carga el archivo de entrenamiento... etc
 
 # Anexos
 
+
+## Anexo A: Instalación librerías OpenCV
+
+Para la instalación de OpenCV, ingresar al link de la página oficial:
+https://sourceforge.net/projects/opencvlibrary/files/opencv-win/
+![ED21](images/PASO2.png)
+
+Al ingresar, hacer click en donde dice "page on Sourceforge" para ir al link de descarga
+![ED21](images/PASO3.png)
+
+Al cargar la página, hacer click en "Download Latest Version" y se pondrá automáticamente a descargar la última versión de OpenCV.
+![ED21](images/PASO4.png)
+
+Una vez descargado, hay que crear una carpeta en disco C: llamada "OpenCV". Cuando haya descargado el archivo, se abre y se instala en ese directorio (C:\)
+![ED21](images/PASO5.png)
+
+Ya instalado en la carpeta, hay que ir a modificar las variables de entorno del sistema. Para eso solo buscamos en el buscador "Edit the system environment variables" o en su defecto, "Editar las variables de entorno del sistema"
+![ED21](images/PASO6.png)
+
+Una vez abierto, hacer click en "Variables de entorno" en la parte inferior y aparecerá un cuadro, en donde hay que darle a "Nueva" para asignar una nueva variable de entorno en donde ingresaremos el directorio donde se encuentra la carpeta de OpenCV, en el directorio de bin, tal como se muestra en la captura. Una vez realizado esto, aceptamos y cerramos.
+![ED21](images/PASO7.png)
+
+
+
+
+
+
+## Anexo B: Instalación de IDE y configuración librerías OpenCV
+
+
 Para instalar Visual Studio Community 2019, ingresar al siguiente link y hacer click donde dice "Descargar Visual Studio":
 https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019
 
 ![ED21](images/PASO1.png)
 
-## Anexo A: Instalación librerías OpenCV
+Luego, al redireccionar a otra página, hacer click en donde dice "Descarga gratuita" en la sección "Comunidad" y se pondrá a descargar el ejecutable. Una vez abierto, se instalará y pedirá que el computador se reinicie para finalizar la instalación.
+![ED21](images/PASO1_2.png)
+
+Para configurar las librerías que ofrece OpenCV, creamos un nuevo proyecto.
+![ED21](images/PASO8.png)
+
+Hacer click derecho en el nombre del archivo del proyecto, y clickear en propiedades.
+![ED21](images/PASO9.png)
+
+Una vez abiertas las propiedades del proyecto, realizar las siguientes configuraciones que se muestran en las capturas (las marcadas en negrita) 
+![ED21](images/PASO10.png)
+![ED21](images/PASO11.png)
+![ED21](images/PASO12.png)
+![ED21](images/PASO13.png)
+
+Y finalmente, para que reconozca lo previamente realizado utilizar el "x64" en la configuración de compilación, ya que si se ingresa otra no funcionará, puesto que las configuraciones se hicieron solo para x64.
+![ED21](images/PASO14.png)
 
 
-## Anexo B: Instalación de IDE y configuración librerías OpenCV
-
-# Referecia
+# Referencias
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
