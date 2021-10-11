@@ -88,6 +88,9 @@ La primera linea carga el archivo de entrenamiento... etc
 
 # Anexos
 
+Para instalar Visual Studio Community 2019, ingresar al siguiente link y hacer click donde dice "Descargar Visual Studio":
+https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019
+
 ![ED21](images/PASO1.png)
 
 ## Anexo A: Instalación librerías OpenCV
