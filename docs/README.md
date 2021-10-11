@@ -7,8 +7,8 @@
 
 **Alumnos:**
 
-* Tamara Ossandón (Rol)
-* Sebastian Ledezma (Rol)
+* Tamara Ossandón (Encargada de bitácora)
+* Sebastian Ledezma (Coordinador)
 
 ## Resumen 
 
