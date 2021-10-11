@@ -6,8 +6,8 @@
 
 ### Integrantes
 
-* Alumno 01 (Rol)
-* Alumno 02 (Rol)
+* Tamara Ossandón (Encargada de bitácora)
+* Sebastián Ledezma (Coordinador)
 
 ### Bitácora
 
