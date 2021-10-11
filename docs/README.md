@@ -7,36 +7,38 @@
 
 **Alumnos:**
 
-* Tamara Ossandón (Rol)
-* Sebastian Ledezma (Rol)
+* Tamara Ossandón (Encargada de bitácora)
+* Sebastian Ledezma (Coordinador)
 
-## Resumen 
+## Resumen (Revisado)
 
-> Como grupo se tuvieron varias instancias de aprendizaje en el transcurrir de las semanas, como primer objetivo fue crear un lugar donde poder tener contacto y crear reuniones al momento de estudiar o realizar trabajos en conjunto, la plataforma usada fue Discord debido a su propuesta de chat de voz y chat escrito, también se dio la tarea de entender y aplicar lo enseñado en clases sobre C y C++, luego se tuvo una instancia de aprendizaje sobre github ya que se nos presento como plataforma de desarrollo, pero como grupo fue una plataforma totalmente nueva debido a  eso se aprendió lo básico tanto la creación de nuevos archivos, carpetas, el funcionamiento de la plataforma y como interactuar con esta misma. Como ultimo objetivo como grupo se coordinó realizar la instalación de IDE y configuración de librerías openCV que se pidió con anterioridad y esto también trajo consigo una instancia de aprendizaje de esta plataforma igualmente nueva para el grupo.
+> En las graduales instancias de aprendizaje que se han dispuesto, tanto de manera autónoma o guiada, como primera instancia se realizó una retroalimentación de la materia respecto a la sintaxis del lenguaje de programación C y C++ y se investigó acerca del funcionamiento de las librerías de OpenCV para relacionar algunos algoritmos con los requerimientos de la primera historia de usuario a implementar. En segunda instancia, se realizó una capacitación necesaria sobre GitHub para poder tener control respecto a las versiones desarrolladas del programa para establecer una mejor organización y planificación del proyecto a nivel general, además de aprender lo básico en cuanto a la creación de  archivos y carpetas, y cómo interactuar con la plataforma. Posteriormente, se instaló una IDE de desarrollo (Visual Studio Code) y OpenCV, en donde se empezó a probar en la IDE distintos algoritmos que estuvieran relacionados a la detección de rostros en archivos multimedia, concluyendo así en el desarrollo del código que permite hacer seguimiento a cada identidad identificada en el video, señalándola con un marco de color rojo.
 
 ## 1. Introducción
 
 
 
-### 1.1 Descripción del problema (Revisar si esta bien)
+### 1.1 Descripción del problema (Revisado)
 
-Para este proyecto se plantea la problemática de detectar rostros faciales usando C++ donde se dispondrá de un video en el cual circulan personas, se tendrá que crear una inteligencia artificial la cual detectara el rostro y por cada rostro detectado este se señalara en un recuadro de color rojo, agregado a eso se implementaran diferentes funciones tales como la cantidad de personas detectadas y el tiempo que estas personas están siendo detectadas, también se darán estadísticas derivadas del tiempo en el cual la persona está siendo detectada.
+El presente proyecto tiene como objetivo implementar un sistema desarrollado en el lenguaje de programación C++ y librerías de OpenCV, que conste en la detección de rostros faciales de un archivo multimedia que presenta distintas identidades, es por tanto, por lo que el se tiene que diseñar y desarrollar una inteligencia artificial la cual detecte cada rostro presente en el video señalándolo con un cuadro de color rojo alrededor de él. Además, se debe implementar diferentes funciones que tendrán un uso en el ámbito de la vigilancia, tales como; un listado de las personas (identidades) detectadas en un intervalo de tiempo definido en el video, y un listado de todas las identidades que se vieron expuestas en la grabación. Ambas, mostrando el número de cada identidad correspondiente y su duración efectiva de exposición. 
 
-### 1.2 Objetivos (Revisar si esta bien)
+### 1.2 Objetivos (Revisado)
 
 **Objetivo General**
 
-Construir un sistema el cual sea capas de detectar rostros faciales y de estos rostros entregar diferentes tipos de datos y estadísticas.
+Construir un sistema de vigilancia a través del reconocimiento de rostros, en donde, mediante una cámara o un video, se detecten los rostros de las diferentes personas que están presentes en la grabación, obteniendo diferentes datos y estadísticas relacionadas a las identidades identificadas.
 
 **Objetivos específicos**
 
-1. Implementar la detección del rostro.
-2. Señar el rostro detectado con un recuadro de un color rojo.
-3. Entregar a cada rostro detectado un código de identidad.
-4. Obtener las cinco identidades que más tiempo fueron detectados.
-5. Establecer e implementar intervalos de tiempo donde se arrojarán diferentes tipos de estadísticas y valores sobre las identidades.
-6. Crear una lista de las diferentes identidades detectadas.
-7. Implementar los intervalos de tiempo junto con los listados para ver las estadísticas y valores.
+1.	Investigar el funcionamiento de las librerías de OpenCV para comprender el funcionamiento de los algoritmos relacionados al reconocimiento facial.
+2.	Implementar las librerías de OpenCV utilizando el lenguaje de programación C++ para realizar el seguimiento e identificación facial.
+3.	Señalar un marco de color rojo alrededor de cada rostro identificado para visualizar de mejor manera la identidad.
+4.	Definir un código de identidad a cada rostro identificado para poder diferenciarlas entre las demás.
+5.	Establecer intervalos de tiempo en la secuencia de video para obtener las diferentes identidades que se vieron identificadas específicamente en ese lapso.
+6.	Obtener las cinco identidades que más tiempo fueron detectadas en la grabación.
+7.	Crear un listado de todas las identidades detectadas indicando el tiempo total de las veces que aparecieron en la grabación.
+8.	Comprobar el correcto funcionamiento del programa a través del uso de distintos archivos multimedia.
+
 
 ### 1.3 Solución propuesta
 
@@ -48,17 +50,15 @@ Explicar brevemente como se espera desarrollar el trabajo de implementación.
 
 ### 2.1 Instalación
 
-Describir brevemente las librerías utilizadas para la instalación y programas utilizados para la ejecución del código. (Agregar una sección de anexo para describir como fueron instaladas las librerías de OpenCV y la IDE utilzada para el trabajo)
+El entorno de desarrollo empleado para desarrollar el programa es Visual Studio Community (2019) y las librerías utilizadas son de OpenCV. Las librerías ofrecen una sólida base que están orientadas a la identificación de rostros e incluso la señalización de estas identidades ya sea en imágenes, videos multimedia o en webcam con Haar Cascades, CascadeClassifier y para su visualización el método "rectangle".
 
 ### 2.2 Diseño 
 
-Explicar los componentes (módulos o clases) utilizados para resolver el problema. Indicar arquitectura propuesta, diagrama de clases u otro artefacto que estime conveniente para explicar el diseño de su implimentación.
+
 
 ### 2.3 Implementación
 
-Explicar brevemente algunos aspectos de implementación: Por ejemplo, detector de caras utilizado. Se pueden realizar pequeñas reseñas al código para indicar elementos importantes en el trabajo.
 
-Por ejemplo, 
 
 #### Detector de caras
 
@@ -86,15 +86,77 @@ La primera linea carga el archivo de entrenamiento... etc
 
 # Anexos
 
+
 ## Anexo A: Instalación librerías OpenCV
 
+
+Para la instalación de OpenCV, ingresar al link de la página oficial:
+https://sourceforge.net/projects/opencvlibrary/files/opencv-win/
+
+![ED21](images/PASO2.png)
+
+Al ingresar, hacer click en donde dice "page on Sourceforge" para ir al link de descarga.
+
+![ED21](images/PASO3.png)
+
+Al cargar la página, hacer click en "Download Latest Version" y se pondrá automáticamente a descargar la última versión de OpenCV.
+
+![ED21](images/PASO4.png)
+
+Una vez descargado, hay que crear una carpeta en disco C: llamada "OpenCV". Cuando haya descargado el archivo, se abre y se instala en ese directorio (C:\)
+
+![ED21](images/PASO5.png)
+
+Ya instalado en la carpeta, hay que ir a modificar las variables de entorno del sistema. Para eso solo buscamos en el buscador "Edit the system environment variables" o en su defecto, "Editar las variables de entorno del sistema"
+
+![ED21](images/PASO6.png)
+
+Una vez abierto, hacer click en "Variables de entorno" en la parte inferior y aparecerá un cuadro, en donde hay que darle a "Nueva" para asignar una nueva variable de entorno en donde ingresaremos el directorio donde se encuentra la carpeta de OpenCV, en el directorio de bin, tal como se muestra en la captura. Una vez realizado esto, aceptamos y cerramos.
+
+![ED21](images/PASO7.png)
+
+
+
+
+
+
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
+
+
+Para instalar Visual Studio Community 2019, ingresar al siguiente link y hacer click donde dice "Descargar Visual Studio":
+https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019
+
+![ED21](images/PASO1.png)
+
+Luego, al redireccionar a otra página, hacer click en donde dice "Descarga gratuita" en la sección "Comunidad" y se pondrá a descargar el ejecutable. Una vez abierto, se instalará y pedirá que el computador se reinicie para finalizar la instalación.
+
+![ED21](images/PASO1_2.png)
+
+Para configurar las librerías que ofrece OpenCV, creamos un nuevo proyecto.
+
+![ED21](images/PASO8.png)
+
+Hacer click derecho en el nombre del archivo del proyecto, y clickear en propiedades.
+
+![ED21](images/PASO9.png)
+
+Una vez abiertas las propiedades del proyecto, realizar las siguientes configuraciones que se muestran en las capturas (las marcadas en negrita) 
+
+![ED21](images/PASO10.png)
+![ED21](images/PASO11.png)
+![ED21](images/PASO12.png)
+![ED21](images/PASO13.png)
+
+Y finalmente, para que reconozca lo previamente realizado utilizar el "x64" en la configuración de compilación, ya que si se ingresa otra no funcionará, puesto que las configuraciones se hicieron solo para x64.
+
+![ED21](images/PASO14.png)
+
 
 # Referencias
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
-1. MONTERO, J.,Metodos matemáticos aplicados a la ganadería.3aed. Sevilla: Ediciones de la pradera,2007.
-2. LVARADO,   J.   P.,¿Qué   debe   contener   un   artículo   científico?.http://www.ie.tec.ac.cr/palvarado/pmwiki/index.php/MSc/Art\%c3\%adculoCient\%c3\%adfico. Fe-cha de acceso:13/Nov/2018
+1. Computer Vision Zone. (2021, 14 julio). OpenCV C++. https://www.computervision.zone/courses/opencv-cv/
+2. Márquez, J. C. C. (2019, 6 mayo). Instalar OpenCV con Visual Studio 2017. aprendiendo ingeniería. https://aprendiendoingenieria.es/instalar-opencv-con-visual-studio-2017/
 
 
