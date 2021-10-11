@@ -26,7 +26,7 @@ El presente proyecto tiene como objetivo implementar un sistema desarrollado en 
 
 **Objetivo General**
 
-Construir un sistema de vigilancia a través del reconocimiento de rostros, en donde, mediante una cámara o un video, se detect3n los rostros de las diferentes personas que están presentes en la grabación, obteniendo diferentes datos y estadísticas relacionadas a las identidades identificadas.
+Construir un sistema de vigilancia a través del reconocimiento de rostros, en donde, mediante una cámara o un video, se detecten los rostros de las diferentes personas que están presentes en la grabación, obteniendo diferentes datos y estadísticas relacionadas a las identidades identificadas.
 
 **Objetivos específicos**
 
