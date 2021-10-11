@@ -10,9 +10,9 @@
 * Tamara Ossandón (Encargada de bitácora)
 * Sebastian Ledezma (Coordinador)
 
-## Resumen 
+## Resumen (Revisado)
 
-> Como grupo se tuvieron varias instancias de aprendizaje en el transcurrir de las semanas, como primer objetivo fue crear un lugar donde poder tener contacto y crear reuniones al momento de estudiar o realizar trabajos en conjunto, la plataforma usada fue Discord debido a su propuesta de chat de voz y chat escrito, también se dio la tarea de entender y aplicar lo enseñado en clases sobre C y C++, luego se tuvo una instancia de aprendizaje sobre github ya que se nos presento como plataforma de desarrollo, pero como grupo fue una plataforma totalmente nueva debido a  eso se aprendió lo básico tanto la creación de nuevos archivos, carpetas, el funcionamiento de la plataforma y como interactuar con esta misma. Como ultimo objetivo como grupo se coordinó realizar la instalación de IDE y configuración de librerías openCV que se pidió con anterioridad y esto también trajo consigo una instancia de aprendizaje de esta plataforma igualmente nueva para el grupo.
+> En las graduales instancias de aprendizaje que se han dispuesto, tanto de manera autónoma o guiada, como primera instancia se realizó una retroalimentación de la materia respecto a la sintaxis del lenguaje de programación C y C++ y se investigó acerca del funcionamiento de las librerías de OpenCV para relacionar algunos algoritmos con los requerimientos de la primera historia de usuario a implementar. En segunda instancia, se realizó una capacitación necesaria sobre GitHub para poder tener control respecto a las versiones desarrolladas del programa para establecer una mejor organización y planificación del proyecto a nivel general, además de aprender lo básico en cuanto a la creación de  archivos y carpetas, y cómo interactuar con la plataforma. Posteriormente, se instaló una IDE de desarrollo (Visual Studio Code) y OpenCV, en donde se empezó a probar en la IDE distintos algoritmos que estuvieran relacionados a la detección de rostros en archivos multimedia, concluyendo así en el desarrollo del código que permite hacer seguimiento a cada identidad identificada en el video, señalándola con un marco de color rojo.
 
 ## 1. Introducción
 
