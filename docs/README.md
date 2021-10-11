@@ -22,7 +22,7 @@
 
 Para este proyecto se plantea la problemática de detectar rostros faciales usando C++ donde se dispondrá de un video en el cual circulan personas, se tendrá que crear una inteligencia artificial la cual detectara el rostro y por cada rostro detectado este se señalara en un recuadro de color rojo, agregado a eso se implementaran diferentes funciones tales como la cantidad de personas detectadas y el tiempo que estas personas están siendo detectadas, también se darán estadísticas derivadas del tiempo en el cual la persona está siendo detectada.
 
-### 1.2 Objetivos (Revisar si esta bien)
+### 1.2 Objetivos (Revisado)
 
 **Objetivo General**
 
