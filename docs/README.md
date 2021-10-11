@@ -88,7 +88,10 @@ La primera linea carga el archivo de entrenamiento... etc
 
 # Anexos
 
+![ED21](images/PASO1.png)
+
 ## Anexo A: Instalación librerías OpenCV
+
 
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
 
