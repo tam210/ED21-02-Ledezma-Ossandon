@@ -30,13 +30,15 @@ Construir un sistema el cual sea capas de detectar rostros faciales y de estos r
 
 **Objetivos específicos**
 
-1. Implementar la detección del rostro.
-2. Señar el rostro detectado con un recuadro de un color rojo.
-3. Entregar a cada rostro detectado un código de identidad.
-4. Obtener las cinco identidades que más tiempo fueron detectados.
-5. Establecer e implementar intervalos de tiempo donde se arrojarán diferentes tipos de estadísticas y valores sobre las identidades.
-6. Crear una lista de las diferentes identidades detectadas.
-7. Implementar los intervalos de tiempo junto con los listados para ver las estadísticas y valores.
+1.	Investigar el funcionamiento de las librerías de OpenCV para comprender el funcionamiento de los algoritmos relacionados al reconocimiento facial.
+2.	Implementar las librerías de OpenCV utilizando el lenguaje de programación C++ para realizar el seguimiento e identificación facial.
+3.	Señalar un marco de color rojo alrededor de cada rostro identificado para visualizar de mejor manera la identidad.
+4.	Definir un código de identidad a cada rostro identificado para poder diferenciarlas entre las demás.
+5.	Establecer intervalos de tiempo en la secuencia de video para obtener las diferentes identidades que se vieron identificadas específicamente en ese lapso.
+6.	Obtener las cinco identidades que más tiempo fueron detectadas en la grabación.
+7.	Crear un listado de todas las identidades detectadas indicando el tiempo total de las veces que aparecieron en la grabación.
+8.	Comprobar el correcto funcionamiento del programa a través del uso de distintos archivos multimedia.
+
 
 ### 1.3 Solución propuesta
 
