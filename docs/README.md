@@ -90,7 +90,7 @@ La primera linea carga el archivo de entrenamiento... etc
 
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
 
-# Referecia
+# Referencias
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
