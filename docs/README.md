@@ -158,7 +158,7 @@ Y finalmente, para que reconozca lo previamente realizado utilizar el "x64" en l
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
-1. MONTERO, J.,Metodos matemáticos aplicados a la ganadería.3aed. Sevilla: Ediciones de la pradera,2007.
-2. LVARADO,   J.   P.,¿Qué   debe   contener   un   artículo   científico?.http://www.ie.tec.ac.cr/palvarado/pmwiki/index.php/MSc/Art\%c3\%adculoCient\%c3\%adfico. Fe-cha de acceso:13/Nov/2018
+1. Computer Vision Zone. (2021, 14 julio). OpenCV C++. https://www.computervision.zone/courses/opencv-cv/
+2. Márquez, J. C. C. (2019, 6 mayo). Instalar OpenCV con Visual Studio 2017. aprendiendo ingeniería. https://aprendiendoingenieria.es/instalar-opencv-con-visual-studio-2017/
 
 
