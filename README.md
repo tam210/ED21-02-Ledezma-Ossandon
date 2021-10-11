@@ -19,7 +19,7 @@ En las graduales instancias de aprendizaje que se han dispuesto, tanto de manera
 
  ![ED21](docs/images/id_facial.png)
 
-p align="center">
+<p align="center">
   <img />
 </p>
 
