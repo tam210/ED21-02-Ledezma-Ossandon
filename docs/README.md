@@ -10,7 +10,7 @@
 * Tamara Ossandón (Encargada de bitácora)
 * Sebastian Ledezma (Coordinador)
 
-## Resumen (Revisado)
+## Resumen
 
 > En las graduales instancias de aprendizaje que se han dispuesto, tanto de manera autónoma o guiada, como primera instancia se realizó una retroalimentación de la materia respecto a la sintaxis del lenguaje de programación C y C++ y se investigó acerca del funcionamiento de las librerías de OpenCV para relacionar algunos algoritmos con los requerimientos de la primera historia de usuario a implementar. En segunda instancia, se realizó una capacitación necesaria sobre GitHub para poder tener control respecto a las versiones desarrolladas del programa para establecer una mejor organización y planificación del proyecto a nivel general, además de aprender lo básico en cuanto a la creación de  archivos y carpetas, y cómo interactuar con la plataforma. Posteriormente, se instaló una IDE de desarrollo (Visual Studio Code) y OpenCV, en donde se empezó a probar en la IDE distintos algoritmos que estuvieran relacionados a la detección de rostros en archivos multimedia, concluyendo así en el desarrollo del código que permite hacer seguimiento a cada identidad identificada en el video, señalándola con un marco de color rojo.
 
@@ -18,11 +18,11 @@
 
 
 
-### 1.1 Descripción del problema (Revisado)
+### 1.1 Descripción del problema 
 
 El presente proyecto tiene como objetivo implementar un sistema desarrollado en el lenguaje de programación C++ y librerías de OpenCV, que conste en la detección de rostros faciales de un archivo multimedia que presenta distintas identidades, es por tanto, por lo que el se tiene que diseñar y desarrollar una inteligencia artificial la cual detecte cada rostro presente en el video señalándolo con un cuadro de color rojo alrededor de él. Además, se debe implementar diferentes funciones que tendrán un uso en el ámbito de la vigilancia, tales como; un listado de las personas (identidades) detectadas en un intervalo de tiempo definido en el video, y un listado de todas las identidades que se vieron expuestas en la grabación. Ambas, mostrando el número de cada identidad correspondiente y su duración efectiva de exposición. 
 
-### 1.2 Objetivos (Revisado)
+### 1.2 Objetivos 
 
 **Objetivo General**
 
@@ -54,31 +54,55 @@ El entorno de desarrollo empleado para desarrollar el programa es Visual Studio 
 
 ### 2.2 Diseño 
 
+Respecto al diseño del programa, se trata de tratar a cada rostro como una identidad, por lo que, través de las librerías de OpenCV, se leerán las identidades del video y se almacenarán en una lista general de rostros, en las cuales cada identidad tendrá su imagen (captura del rostro) y tiempo de duración en el video. Es con estas características que podremos dar inicio a poder recorrer esta lista para realizar distintas operaciones, por ejemplo capturar el rango de aparición de cada identidad, o la cantidad de apariciones en un tiempo determinado. De ser necesario, se crearán otras listas dinámicas para almacenar temporalmente algunos registros de identidades para usarlos en el problema solicitado.
+
 
 
 ### 2.3 Implementación
 
+En la implementación, se utilizarán listas enlazadas para tratar con las identidades que serán guardadas en estas. Cabe señalar, que las clases utilizadas será la LinkedList, la clase Node y el main. En la clase Node se guardará la identidad del rostro (captura del rostro) de tipo Mat y su duración acumulada en el video de tipo int, indicando los segundos de aparición.
 
 
 #### Detector de caras
 
 El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código para detectar una cara en una imagen se muestra a continuación:
+int main() {
 
-```c++
- 1. faceCascadePath = "./haarcascade_frontalface_default.xml";
- 2. faceCascade.load( faceCascadePath )
- 3. std::vector<Rect> faces;
- 4. faceCascade.detectMultiScale(frameGray, faces);
+ double scale = 3.0;
+    CascadeClassifier faceCascade;
+    faceCascade.load("C:\\OpenCV\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_default.xml");
+    
+    string path = "Resources/ekisde.mp4";
+    VideoCapture cap(path);
 
- 5. for ( size_t i = 0; i < faces.size(); i++ )
- 6. {
- 7.  int x1 = faces[i].x;
- 8.  int y1 = faces[i].y;
- 9.  int x2 = faces[i].x + faces[i].width;
-10.  int y2 = faces[i].y + faces[i].height;
-11. }
-```
-La primera linea carga el archivo de entrenamiento... etc
+    if (!cap.isOpened()) {
+        return -1;
+    }
+   
+for (;;) {
+
+        Mat frame;
+        cap >> frame;
+        Mat grayscale;
+        cvtColor(frame, grayscale, COLOR_BGR2GRAY);
+        resize(grayscale, grayscale, Size(grayscale.size().width / scale, grayscale.size().height / scale));
+        
+        vector<Rect> faces;
+        faceCascade.detectMultiScale(grayscale, faces, 1.1, 3, 0, Size(30, 30));
+
+        for (Rect area : faces) {
+            Scalar drawColor = Scalar(255, 0, 0);
+                rectangle(frame, Point(cvRound(area.x * scale), cvRound(area.y * scale)), Point(cvRound((area.x + area.width - 1) * scale), cvRound((area.y + area.height - 1) * scale)), drawColor);
+                
+        }
+        imshow("Webcam frame", frame);
+        if (waitKey(30) >= 0) {
+            break;
+        }
+
+
+    }
+}
 
 ## 3. Resultados obtenidos
 
