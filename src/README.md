@@ -3,23 +3,15 @@
 ## Organización del proyecto
 ------------
 
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    ├── src                       <- Source code for use in this project.
+    │   ├── main.cpp              <- Main principal del programa
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   ├── LinkedList.cpp        <- Clase que actúa como lista para almacenar los rostros
+    │   │   
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
+    │   ├── Node.cpp              <- Clase nodo que actúa como referencia de un nodo con puntero 
+    │       
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └──
 
 --------
