@@ -4,6 +4,6 @@
 
 | Fecha  | Objetivo  | Trabajo Realizado | Responsable | Tiempo Estimado | Tiempo Real |
 |--------|-----------|-------------------|-------------|-----------------|-------------|
-| 30/SEP | OBJ-01    | Leer el código de detección de caras| jbekios     | 2 horas    | 4 horas |
-| 01/SEP | OBJ-01    | Buscar uso de punteros en C++ para asignación de memoria dinámica | jbekios |  0.5 horas | 0.3 horas |
-| 01/SEP | OBJ-03 | Implementar lectura de imágenes utilizando las librerías de OpenCV | jbekios | 1.5 horas | 2 horas |
+| 24/SEP | OBJ-01    | Investigar el funcionamiento de las librerías OpenCV| Tamara Ossandón     | 2 horas    | 5 horas |
+| 01/SEP | OBJ-01    | Relacionar la sintaxis de C++ con los algoritmos de ejercicios hechos con las librerías de OpenCV | Sebastián Ledezma |  1 horas | 3 horas |
+| 07/SEP | OBJ-02    | Implementar lectura de imágenes utilizando las librerías de OpenCV | Sebastián Ledezma y Tamara Ossandón | 2horas | 3 horas |
