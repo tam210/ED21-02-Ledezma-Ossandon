@@ -56,22 +56,22 @@ El entorno de desarrollo empleado para desarrollar el programa es Visual Studio 
 En el proyecto actual hay actualmente X módulos de implementación para hacer funcional el código, los cuales son los siguientes:
 
 **Header files**: Contiene las clases con terminación ".h", es decir, contiene las interfaces de implementación de los archivos ".cpp", que son los siguientes:
-a. ArbolFrecuencias.h
-b. ArbolOrdenado.h
-c.BinarySearchTree.h
-d. BinarySearchTreeNode.h
-e. FaceDetector.h
-f. ImageCoding.h
+1. ArbolFrecuencias.h
+2. ArbolOrdenado.h
+3.BinarySearchTree.h
+4. BinarySearchTreeNode.h
+5. FaceDetector.h
+6. ImageCoding.h
 
 **Resource files**: Contiene la clase principal "main.cpp" que ejecuta e incluye a las demás clases ".h" para hacer funcionar el código principal.
 
 **Source files**: Contiene la implementación de las clases definidas en el módulo "Header Files":
 
-a. ArbolFrecuencias.cpp
-b. ArbolOrdenado.cpp
-c.BinarySearchTree.cpp
-e. FaceDetector.cpp
-f. ImageCoding.cpp
+1. ArbolFrecuencias.cpp
+2. ArbolOrdenado.cpp
+3.BinarySearchTree.cpp
+4. FaceDetector.cpp
+5. ImageCoding.cpp
 
 **data**: Contiene los archivos multimedia que son sujetos a análisis en el código principal "main.cpp"
 
@@ -79,12 +79,12 @@ f. ImageCoding.cpp
 
 **Clases implementadas**: 
 
-a. ArbolFrecuencias: Clase que implementa un árbol y lo ordena según la frecuencia que tiene cada nodo que representa una identidad.
-b. ArbolOrdenado: Clase que implementa un árbol y que por dentro define la similitud de la imagen analizada y la imagen por analizar. En la inserción de la imagen, se crea un nuevo nodo con la información de la identidad (Imagen, frecuencia, ID) y lo posiciona en la ubicación correspondiente en la estructura.
-c.BinarySearchTree: Clase de guía (no influyente en el código principal) para implementar los árboles anteriores.
-d. BinarySearchTreeNode: Clase que define la estructura de un nodo principal que contiene una variable para guardar el ID de la identidad, frecuencia de aparición e imagen. Posee además, dos nodos que representan los nodos hijos (izquierdo y derecho) del nodo presente.
-e. FaceDetector: Clase que detecta las caras en una imagen, teniendo métodos internos como el aumento en el contraste de la imagen.
-f. ImageCoding.h: Clase que procesa la imagen, convierte a grises, escala y ecualiza.
+1. ArbolFrecuencias: Clase que implementa un árbol y lo ordena según la frecuencia que tiene cada nodo que representa una identidad.
+2. ArbolOrdenado: Clase que implementa un árbol y que por dentro define la similitud de la imagen analizada y la imagen por analizar. En la inserción de la imagen, se crea un nuevo nodo con la información de la identidad (Imagen, frecuencia, ID) y lo posiciona en la ubicación correspondiente en la estructura.
+3.BinarySearchTree: Clase de guía (no influyente en el código principal) para implementar los árboles anteriores.
+4. BinarySearchTreeNode: Clase que define la estructura de un nodo principal que contiene una variable para guardar el ID de la identidad, frecuencia de aparición e imagen. Posee además, dos nodos que representan los nodos hijos (izquierdo y derecho) del nodo presente.
+5. FaceDetector: Clase que detecta las caras en una imagen, teniendo métodos internos como el aumento en el contraste de la imagen.
+6. ImageCoding.h: Clase que procesa la imagen, convierte a grises, escala y ecualiza.
 
 
 ### 2.3 Implementación
