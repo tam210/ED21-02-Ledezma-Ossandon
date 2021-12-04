@@ -10,7 +10,7 @@
 * Tamara Ossandón (Encargada de bitácora)
 * Sebastian Ledezma (Coordinador)
 
-## Resumen (Revisado)
+## Resumen 
 
 > En las graduales instancias de aprendizaje que se han dispuesto, tanto de manera autónoma o guiada, como primera instancia se realizó una retroalimentación de la materia respecto a la sintaxis del lenguaje de programación C y C++ y se investigó acerca del funcionamiento de las librerías de OpenCV para relacionar algunos algoritmos con los requerimientos de la primera historia de usuario a implementar. En segunda instancia, se realizó una capacitación necesaria sobre GitHub para poder tener control respecto a las versiones desarrolladas del programa para establecer una mejor organización y planificación del proyecto a nivel general, además de aprender lo básico en cuanto a la creación de  archivos y carpetas, y cómo interactuar con la plataforma. Posteriormente, se instaló una IDE de desarrollo (Visual Studio Code) y OpenCV, en donde se empezó a probar en la IDE distintos algoritmos que estuvieran relacionados a la detección de rostros en archivos multimedia, concluyendo así en el desarrollo del código que permite hacer seguimiento a cada identidad identificada en el video, señalándola con un marco de color rojo.
 
@@ -18,11 +18,10 @@
 
 
 
-### 1.1 Descripción del problema (Revisado)
-
+### 1.1 Descripción del problema
 El presente proyecto tiene como objetivo implementar un sistema desarrollado en el lenguaje de programación C++ y librerías de OpenCV, que conste en la detección de rostros faciales de un archivo multimedia que presenta distintas identidades, es por tanto, por lo que el se tiene que diseñar y desarrollar una inteligencia artificial la cual detecte cada rostro presente en el video señalándolo con un cuadro de color rojo alrededor de él. Además, se debe implementar diferentes funciones que tendrán un uso en el ámbito de la vigilancia, tales como; un listado de las personas (identidades) detectadas en un intervalo de tiempo definido en el video, y un listado de todas las identidades que se vieron expuestas en la grabación. Ambas, mostrando el número de cada identidad correspondiente y su duración efectiva de exposición. 
 
-### 1.2 Objetivos (Revisado)
+### 1.2 Objetivos
 
 **Objetivo General**
 
@@ -42,11 +41,11 @@ Construir un sistema de vigilancia a través del reconocimiento de rostros, en d
 
 ### 1.3 Solución propuesta
 
-Esbozo de la solución propuesta, se espera que esta vaya evolucionando a medida que se avanza en el proyecto.
+
 
 ## 2. Materiales y métodos
 
-Explicar brevemente como se espera desarrollar el trabajo de implementación.
+A través de las herramientas que ofrece OpenCV, se necesita implementar un tipo de elemento para guardar la información de cada cara identificada en los archivos multimedia. Es por esto, que se utilizará una estructura recursiva: Árboles binarios. Es en esta estructura en donde se alojará la información de cada rostro identificado. En un árbol, se guardarán las identidades únicas con una ID asociada, quedando conformado el árbol según la ID de cada imagen. En el otro árbol, la estructura estará dada por la frecuencia (cantidad de veces que aparece la identidad en el video/imagenes consecutivas), en donde se ordenará en relación a esta. Luego de guardar la información leída de los archivos multimedia, se hará una función que pueda obtener las 5 primeras identidades que tienen la mayor frecuencia, ordenadas mediante el recorrido específico denominado "InOrder", desplegando así los IDs asociados junto con su frecuencia de aparición. Es así, como tendremos lo necesario para completar el objetivo específico N°6.
 
 ### 2.1 Instalación
 
@@ -54,6 +53,38 @@ El entorno de desarrollo empleado para desarrollar el programa es Visual Studio 
 
 ### 2.2 Diseño 
 
+En el proyecto actual hay actualmente X módulos de implementación para hacer funcional el código, los cuales son los siguientes:
+
+**Header files**: Contiene las clases con terminación ".h", es decir, contiene las interfaces de implementación de los archivos ".cpp", que son los siguientes:
+a. ArbolFrecuencias.h
+b. ArbolOrdenado.h
+c.BinarySearchTree.h
+d. BinarySearchTreeNode.h
+e. FaceDetector.h
+f. ImageCoding.h
+
+**Resource files**: Contiene la clase principal "main.cpp" que ejecuta e incluye a las demás clases ".h" para hacer funcionar el código principal.
+
+**Source files**: Contiene la implementación de las clases definidas en el módulo "Header Files":
+
+a. ArbolFrecuencias.cpp
+b. ArbolOrdenado.cpp
+c.BinarySearchTree.cpp
+e. FaceDetector.cpp
+f. ImageCoding.cpp
+
+**data**: Contiene los archivos multimedia que son sujetos a análisis en el código principal "main.cpp"
+
+**classifiers**: Contiene el archivo "haarcascade_frontalface_alt.xml", el cual es un archivo con un enfoque de aprendizaje automático en donde su función radica a entrenarse a sí mismo a través del análisis de imágenes. Es por este archivo, por el que es posible detectar las identidades faciales en las imágenes analizadas.
+
+**Clases implementadas**: 
+
+a. ArbolFrecuencias: Clase que implementa un árbol y lo ordena según la frecuencia que tiene cada nodo que representa una identidad.
+b. ArbolOrdenado: Clase que implementa un árbol y que por dentro define la similitud de la imagen analizada y la imagen por analizar. En la inserción de la imagen, se crea un nuevo nodo con la información de la identidad (Imagen, frecuencia, ID) y lo posiciona en la ubicación correspondiente en la estructura.
+c.BinarySearchTree: Clase de guía (no influyente en el código principal) para implementar los árboles anteriores.
+d. BinarySearchTreeNode: Clase que define la estructura de un nodo principal que contiene una variable para guardar el ID de la identidad, frecuencia de aparición e imagen. Posee además, dos nodos que representan los nodos hijos (izquierdo y derecho) del nodo presente.
+e. FaceDetector: Clase que detecta las caras en una imagen, teniendo métodos internos como el aumento en el contraste de la imagen.
+f. ImageCoding.h: Clase que procesa la imagen, convierte a grises, escala y ecualiza.
 
 
 ### 2.3 Implementación
