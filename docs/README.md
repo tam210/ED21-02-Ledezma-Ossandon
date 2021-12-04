@@ -41,6 +41,8 @@ Construir un sistema de vigilancia a través del reconocimiento de rostros, en d
 
 ### 1.3 Solución propuesta
 
+Respecto al diseño del programa, se trata de tratar a cada rostro como una identidad, por lo que, través de las librerías de OpenCV, se leerán las identidades del video y se almacenarán en una lista general de rostros, en las cuales cada identidad tendrá su imagen (captura del rostro) y tiempo de duración en el video. Es con estas características que podremos dar inicio a poder recorrer esta estructura para realizar distintas operaciones, por ejemplo capturar el rango de aparición de cada identidad, o la cantidad de apariciones en un tiempo determinado. De ser necesario, se crearán otras estructuras dinámicas para almacenar temporalmente algunos registros de identidades para usarlos en el problema solicitado.
+
 
 
 ## 2. Materiales y métodos
