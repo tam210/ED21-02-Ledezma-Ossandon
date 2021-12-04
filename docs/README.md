@@ -53,7 +53,7 @@ El entorno de desarrollo empleado para desarrollar el programa es Visual Studio 
 
 ### 2.2 Diseño 
 
-En el proyecto actual hay actualmente X módulos de implementación para hacer funcional el código, los cuales son los siguientes:
+En el proyecto actual hay actualmente 5 módulos de implementación para hacer funcional el código, los cuales son los siguientes:
 
 **Header files**: Contiene las clases con terminación ".h", es decir, contiene las interfaces de implementación de los archivos ".cpp", que son los siguientes:
 1. ArbolFrecuencias.h
