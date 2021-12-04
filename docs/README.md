@@ -58,7 +58,7 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 **Header files**: Contiene las clases con terminación ".h", es decir, contiene las interfaces de implementación de los archivos ".cpp", que son los siguientes:
 1. ArbolFrecuencias.h
 2. ArbolOrdenado.h
-3.BinarySearchTree.h
+3. BinarySearchTree.h
 4. BinarySearchTreeNode.h
 5. FaceDetector.h
 6. ImageCoding.h
@@ -69,7 +69,7 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 
 1. ArbolFrecuencias.cpp
 2. ArbolOrdenado.cpp
-3.BinarySearchTree.cpp
+3. BinarySearchTree.cpp
 4. FaceDetector.cpp
 5. ImageCoding.cpp
 
@@ -107,7 +107,7 @@ El funcionamiento consiste en recorrer recursivamente el árbol a través de la 
 ```
 
 La siguiente función imprime por consola el ID de las identidades identificadas a lo largo del programa. El orden de impresión es de la frecuencia menor a la frecuencia mayor.
-
+```c++
 1. void enOrden(BinarySearchTreeNode* root) {
 2.    if (root != nullptr) {
 3.        enOrden(root->left);
@@ -115,10 +115,12 @@ La siguiente función imprime por consola el ID de las identidades identificadas
 5.        enOrden(root->right);          
 6.    }
 7. }
+```
 
 La siguiente función imprime por consola el ID de las 5 identidades, junto a su frecuencia. La implementación radica en el uso de la recursión para la búsqueda, y la omisión de la impresión de los valores que no corresponden (no son los primeros 5) a través del parámetro entero "omision" que como entrada tiene la diferencia entre la cantidad de elementos del árbol y la cantidad de identidades a mostrar, por lo que cada vez que encuentra un nodo se descontará una unidad hasta llegar a 0, en donde ahí sí puede mostrar las identidades restantes (y como está ordenado en orden, mostrará las últimas 5 con mayor frecuencia) 
 
-1.void identidades(BinarySearchTreeNode* root, int *c, int omision) {
+```c++
+1. void identidades(BinarySearchTreeNode* root, int *c, int omision) {
 2. //6-5 = 1, a partir del 1 imprime
 3.    if (root != nullptr) {
 4.        identidades(root->left, c, omision);
@@ -131,9 +133,11 @@ La siguiente función imprime por consola el ID de las 5 identidades, junto a su
 11.        identidades(root->right, c, omision);
 12.    }
 13. }
+```
 
 La siguiente función inserta los nodos obtenidos del árbol "ArbolFrecuencias" de manera ordenada (InOrder) en el árbol "ArbolOrdenado" que está ordenado por frecuencias. Se utiliza la misma funcionalidad de la función "enOrden".
 
+```c++
 1. void insertarNodosOrdenadosFrecuencia(BinarySearchTreeNode* &root, ArbolOrdenado &aoo) {
 2.     if (root != nullptr) {
 3.         insertarNodosOrdenadosFrecuencia(root->left, aoo);
@@ -144,12 +148,14 @@ La siguiente función inserta los nodos obtenidos del árbol "ArbolFrecuencias" 
 8.        insertarNodosOrdenadosFrecuencia(root->right, aoo);
 9.    }
 10. }
+```
 
 
 #### Detector de caras
 
 El siguiente código fue utilizado para la detección de identidades, el cual utiliza métodos y funciones de otras clases como "FaceDetect" o "ImageCoding", el cuales fueron descritos anteriormente en la sección de módulos y clases. Su funcionamiento se debe básicamente en el uso de un archivo entrenado en la identificación de rostros faciales, los cuales se almacenan en una variable de tipo Mat para luego codificarla y devolver un vector de tipo Rect, el cual se iterará posteriormente para la inserción en los árboles correspondientes.
 
+```c++
 1. FaceDetector::FaceDetector() : scaleFactor_(1.05), minNeighbors_(8), imageWidth_(50), imageHeight_(50) {
 2.    face_cascade.load("C:/Users/jimimix/Desktop/datita/classifiers/haarcascade_frontalface_alt.xml");
 3. }
@@ -168,7 +174,8 @@ El siguiente código fue utilizado para la detección de identidades, el cual ut
 15.        0 | CASCADE_SCALE_IMAGE,
 16.        Size(imageWidth_, imageHeight_));
 17.    return faces;
-18 }
+18. }
+```
 
 
 ## 3. Resultados obtenidos
