@@ -16,6 +16,8 @@
 
 ## 1. Introducción
 
+El reconocimiento facial es una tarea que, si bien, parece difícil, hay algunos procesos ya continuados pre-construidos anteriormente para construir grandes esqueletos de procesamiento de información que pueden satisfacer grandes problemas de la sociedad, sobretodo últimamente en lo que respecta al reconocimiento e identificación facial, tema importante de seguridad y seguimiento que aporta tanto a las áreas de economía, seguridad, compras diarias, etc. Es por esto, que a través de OpenCV, se quiere construir un programa por el cual tenga como objetivo principal el reconocimiento facial para poder construir un sistema de vigilancia basado en este reconocimiento facial. Para ello, se cuenta con un dispositivo de adquisición, en el cual se deben detectar las caras de diferentes personas que aparecen en la grabación, haciendo un resumen de las iddentidades presentes y las estadísticas relacionadas a la duración de la exposición en el metraje.
+
 
 
 ### 1.1 Descripción del problema
@@ -40,6 +42,8 @@ Construir un sistema de vigilancia a través del reconocimiento de rostros, en d
 
 
 ### 1.3 Solución propuesta
+
+Respecto al diseño del programa, se trata de tratar a cada rostro como una identidad, por lo que, través de las librerías de OpenCV, se leerán las identidades del video y se almacenarán en una lista general de rostros, en las cuales cada identidad tendrá su imagen (captura del rostro) y tiempo de duración en el video. Es con estas características que podremos dar inicio a poder recorrer esta estructura para realizar distintas operaciones, por ejemplo capturar el rango de aparición de cada identidad, o la cantidad de apariciones en un tiempo determinado. De ser necesario, se crearán otras estructuras dinámicas para almacenar temporalmente algunos registros de identidades para usarlos en el problema solicitado.
 
 
 
@@ -81,7 +85,7 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 
 1. ArbolFrecuencias: Clase que implementa un árbol y lo ordena según la frecuencia que tiene cada nodo que representa una identidad.
 2. ArbolOrdenado: Clase que implementa un árbol y que por dentro define la similitud de la imagen analizada y la imagen por analizar. En la inserción de la imagen, se crea un nuevo nodo con la información de la identidad (Imagen, frecuencia, ID) y lo posiciona en la ubicación correspondiente en la estructura.
-3.BinarySearchTree: Clase de guía (no influyente en el código principal) para implementar los árboles anteriores.
+3. BinarySearchTree: Clase de guía (no influyente en el código principal) para implementar los árboles anteriores.
 4. BinarySearchTreeNode: Clase que define la estructura de un nodo principal que contiene una variable para guardar el ID de la identidad, frecuencia de aparición e imagen. Posee además, dos nodos que representan los nodos hijos (izquierdo y derecho) del nodo presente.
 5. FaceDetector: Clase que detecta las caras en una imagen, teniendo métodos internos como el aumento en el contraste de la imagen.
 6. ImageCoding.h: Clase que procesa la imagen, convierte a grises, escala y ecualiza.
