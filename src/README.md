@@ -1,15 +1,22 @@
 # Código fuentes
 
-## Organización del proyecto
+## Organización del proyecto (repositorio)
 ------------
 
-    ├── src                       <- Source code for use in this project.
-    │   ├── main.cpp              <- Main principal del programa
+    ├── src                            <- Carpeta principal
+    │   ├── main.cpp                   <- Main principal del programa
     │   │
-    │   ├── LinkedList.cpp        <- Clase que actúa como lista para almacenar los rostros
-    │   │   
+    │   ├── ArbolFrecuencias.cpp       <- Árbol binario que ingresa nodos según IDs
+    │   │  
+    │   ├── ImageCoding.cpp            <- Clase que procesa una imagen
+    │   │  
+    │   ├── FaceDetector.cpp           <- Clase que detecta un rostro de una imagen
+    │   │  
+    │   ├── ArbolOrdenado              <- Árbol binario que ingresa nodos según frecuencias
     │   │
-    │   ├── Node.cpp              <- Clase nodo que actúa como referencia de un nodo con puntero 
+    │   ├── BinarySearchTree           <- Árbol binario de referencia
+    │   │
+    │   ├── BinarySearchTreeNode.cpp   <- Clase nodo que almacena la info de una identidad
     │       
     │
     └──
