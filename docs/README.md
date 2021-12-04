@@ -81,7 +81,7 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 
 1. ArbolFrecuencias: Clase que implementa un árbol y lo ordena según la frecuencia que tiene cada nodo que representa una identidad.
 2. ArbolOrdenado: Clase que implementa un árbol y que por dentro define la similitud de la imagen analizada y la imagen por analizar. En la inserción de la imagen, se crea un nuevo nodo con la información de la identidad (Imagen, frecuencia, ID) y lo posiciona en la ubicación correspondiente en la estructura.
-3.BinarySearchTree: Clase de guía (no influyente en el código principal) para implementar los árboles anteriores.
+3. BinarySearchTree: Clase de guía (no influyente en el código principal) para implementar los árboles anteriores.
 4. BinarySearchTreeNode: Clase que define la estructura de un nodo principal que contiene una variable para guardar el ID de la identidad, frecuencia de aparición e imagen. Posee además, dos nodos que representan los nodos hijos (izquierdo y derecho) del nodo presente.
 5. FaceDetector: Clase que detecta las caras en una imagen, teniendo métodos internos como el aumento en el contraste de la imagen.
 6. ImageCoding.h: Clase que procesa la imagen, convierte a grises, escala y ecualiza.
