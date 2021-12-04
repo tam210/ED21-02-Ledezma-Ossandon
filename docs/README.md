@@ -218,7 +218,6 @@ Una vez abierto, hacer click en "Variables de entorno" en la parte inferior y ap
 
 
 
-
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
 
 
@@ -249,6 +248,10 @@ Una vez abiertas las propiedades del proyecto, realizar las siguientes configura
 Y finalmente, para que reconozca lo previamente realizado utilizar el "x64" en la configuración de compilación, ya que si se ingresa otra no funcionará, puesto que las configuraciones se hicieron solo para x64.
 
 ![ED21](images/PASO14.png)
+
+## Anexo C: Visualización módulos del proyecto
+
+![ED21](images/modulos.png)
 
 
 # Referencias
