@@ -88,30 +88,89 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 
 
 ### 2.3 Implementación
+A continuación se muestran las funciones que tuvieron más relevancia en términos de búsqueda y recorrida en un árbol, las cuales fueron cruciales para la impresión de las 5 identidades con más frecuencia.
+La siguiente función devuelve la cantidad de nodos que contiene un árbol, en donde recibe como parámetro el nodo principal del árbol y una variable en donde se guardará la cantidad final de nodos. 
+El funcionamiento consiste en recorrer recursivamente el árbol a través de la función, en donde cada vez que identifique un nodo, se incrementará la cantidad en 1.
 
+1. void cantidad(BinarySearchTreeNode* root, int *cant)
+2. {
+3.    if (root != nullptr)
+4.    {
+5.        (*cant)++;
+6.        cantidad(root->left, cant);
+7.        cout << root->left << endl;
+8.        cantidad(root->right, cant);
+9.        cout << root->right << endl;
+10.    }
+11. }
+
+La siguiente función imprime por consola el ID de las identidades identificadas a lo largo del programa. El orden de impresión es de la frecuencia menor a la frecuencia mayor.
+
+1. void enOrden(BinarySearchTreeNode* root) {
+2.    if (root != nullptr) {
+3.        enOrden(root->left);
+4.        cout << "ID de la imagen: " << root->key << " // Frecuencia: " << root->frec << endl;
+5.        enOrden(root->right);          
+6.    }
+7. }
+
+La siguiente función imprime por consola el ID de las 5 identidades, junto a su frecuencia. La implementación radica en el uso de la recursión para la búsqueda, y la omisión de la impresión de los valores que no corresponden (no son los primeros 5) a través del parámetro entero "omision" que como entrada tiene la diferencia entre la cantidad de elementos del árbol y la cantidad de identidades a mostrar, por lo que cada vez que encuentra un nodo se descontará una unidad hasta llegar a 0, en donde ahí sí puede mostrar las identidades restantes (y como está ordenado en orden, mostrará las últimas 5 con mayor frecuencia) 
+
+1.void identidades(BinarySearchTreeNode* root, int *c, int omision) {
+2. //6-5 = 1, a partir del 1 imprime
+3.    if (root != nullptr) {
+4.        identidades(root->left, c, omision);
+5.        if (omision==0) {
+6.            cout << "ID de la imagen: " << root->key << " // Frecuencia: " << root->frec << endl;
+7.        }
+8.        else {
+9.            omision--;
+10.        }
+11.        identidades(root->right, c, omision);
+12.    }
+13. }
+
+La siguiente función inserta los nodos obtenidos del árbol "ArbolFrecuencias" de manera ordenada (InOrder) en el árbol "ArbolOrdenado" que está ordenado por frecuencias. Se utiliza la misma funcionalidad de la función "enOrden".
+
+1. void insertarNodosOrdenadosFrecuencia(BinarySearchTreeNode* &root, ArbolOrdenado &aoo) {
+2.     if (root != nullptr) {
+3.         insertarNodosOrdenadosFrecuencia(root->left, aoo);
+4.        cout << "[Insertando] ID: " << root->key << " // Frecuencia: " << root->frec << endl;
+5.        aoo.insert(aoo.root,root);
+6.        cout << "[Insertado] ID: " << aoo.root->key << " // Frecuencia: " << aoo.root->frec << endl;
+7.
+8.        insertarNodosOrdenadosFrecuencia(root->right, aoo);
+9.    }
+10. }
 
 
 #### Detector de caras
 
-El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código para detectar una cara en una imagen se muestra a continuación:
+El siguiente código fue utilizado para la detección de identidades, el cual utiliza métodos y funciones de otras clases como "FaceDetect" o "ImageCoding", el cuales fueron descritos anteriormente en la sección de módulos y clases. Su funcionamiento se debe básicamente en el uso de un archivo entrenado en la identificación de rostros faciales, los cuales se almacenan en una variable de tipo Mat para luego codificarla y devolver un vector de tipo Rect, el cual se iterará posteriormente para la inserción en los árboles correspondientes.
 
-```c++
- 1. faceCascadePath = "./haarcascade_frontalface_default.xml";
- 2. faceCascade.load( faceCascadePath )
- 3. std::vector<Rect> faces;
- 4. faceCascade.detectMultiScale(frameGray, faces);
+1. FaceDetector::FaceDetector() : scaleFactor_(1.05), minNeighbors_(8), imageWidth_(50), imageHeight_(50) {
+2.    face_cascade.load("C:/Users/jimimix/Desktop/datita/classifiers/haarcascade_frontalface_alt.xml");
+3. }
 
- 5. for ( size_t i = 0; i < faces.size(); i++ )
- 6. {
- 7.  int x1 = faces[i].x;
- 8.  int y1 = faces[i].y;
- 9.  int x2 = faces[i].x + faces[i].width;
-10.  int y2 = faces[i].y + faces[i].height;
-11. }
-```
-La primera linea carga el archivo de entrenamiento... etc
+4. std::vector<cv::Rect> FaceDetector::detectFaceRectangles(const cv::Mat& frame) {
+5.    std::vector<cv::Rect> faces;
+6.    Mat imageGray;    
+7.    // Detecto las caras (Se debe pasar la imagen a escala de grises
+8.    cvtColor(frame, imageGray, COLOR_BGR2GRAY);
+9.    // Aumento el constraste de una imagen
+10.    equalizeHist(imageGray, imageGray);
+11.    face_cascade.detectMultiScale(imageGray,
+12.        faces,
+13.        scaleFactor_,
+14.        minNeighbors_,
+15.        0 | CASCADE_SCALE_IMAGE,
+16.        Size(imageWidth_, imageHeight_));
+17.    return faces;
+18 }
+
 
 ## 3. Resultados obtenidos
+
 
 ## 4. Conclusiones
 
