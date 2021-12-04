@@ -92,6 +92,7 @@ A continuación se muestran las funciones que tuvieron más relevancia en térmi
 La siguiente función devuelve la cantidad de nodos que contiene un árbol, en donde recibe como parámetro el nodo principal del árbol y una variable en donde se guardará la cantidad final de nodos. 
 El funcionamiento consiste en recorrer recursivamente el árbol a través de la función, en donde cada vez que identifique un nodo, se incrementará la cantidad en 1.
 
+```c++
 1. void cantidad(BinarySearchTreeNode* root, int *cant)
 2. {
 3.    if (root != nullptr)
@@ -103,6 +104,7 @@ El funcionamiento consiste en recorrer recursivamente el árbol a través de la 
 9.        cout << root->right << endl;
 10.    }
 11. }
+```
 
 La siguiente función imprime por consola el ID de las identidades identificadas a lo largo del programa. El orden de impresión es de la frecuencia menor a la frecuencia mayor.
 
