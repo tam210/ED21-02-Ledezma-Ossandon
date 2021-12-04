@@ -16,6 +16,8 @@
 
 ## 1. Introducción
 
+El reconocimiento facial es una tarea que, si bien, parece difícil, hay algunos procesos ya continuados pre-construidos anteriormente para construir grandes esqueletos de procesamiento de información que pueden satisfacer grandes problemas de la sociedad, sobretodo últimamente en lo que respecta al reconocimiento e identificación facial, tema importante de seguridad y seguimiento que aporta tanto a las áreas de economía, seguridad, compras diarias, etc. Es por esto, que a través de OpenCV, se quiere construir un programa por el cual tenga como objetivo principal el reconocimiento facial para poder construir un sistema de vigilancia basado en este reconocimiento facial. Para ello, se cuenta con un dispositivo de adquisición, en el cual se deben detectar las caras de diferentes personas que aparecen en la grabación, haciendo un resumen de las iddentidades presentes y las estadísticas relacionadas a la duración de la exposición en el metraje.
+
 
 
 ### 1.1 Descripción del problema
