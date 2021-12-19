@@ -80,7 +80,7 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 5. ImageCoding.cpp
 6. AVL.cpp
 
-**data**: Contiene los archivos multimedia que son sujetos a análisis en el código principal "main.cpp"
+**datita**: Contiene los archivos multimedia que son sujetos a análisis en el código principal "main.cpp"
 
 **classifiers**: Contiene el archivo "haarcascade_frontalface_alt.xml", el cual es un archivo con un enfoque de aprendizaje automático en donde su función radica a entrenarse a sí mismo a través del análisis de imágenes. Es por este archivo, por el que es posible detectar las identidades faciales en las imágenes analizadas.
 
