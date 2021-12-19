@@ -66,6 +66,8 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 4. BinarySearchTreeNode.h
 5. FaceDetector.h
 6. ImageCoding.h
+7. NodoAVL.h
+8. AVL.h
 
 **Resource files**: Contiene la clase principal "main.cpp" que ejecuta e incluye a las demás clases ".h" para hacer funcionar el código principal.
 
@@ -76,8 +78,9 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 3. BinarySearchTree.cpp
 4. FaceDetector.cpp
 5. ImageCoding.cpp
+6. AVL.cpp
 
-**data**: Contiene los archivos multimedia que son sujetos a análisis en el código principal "main.cpp"
+**datita**: Contiene los archivos multimedia que son sujetos a análisis en el código principal "main.cpp"
 
 **classifiers**: Contiene el archivo "haarcascade_frontalface_alt.xml", el cual es un archivo con un enfoque de aprendizaje automático en donde su función radica a entrenarse a sí mismo a través del análisis de imágenes. Es por este archivo, por el que es posible detectar las identidades faciales en las imágenes analizadas.
 
@@ -89,6 +92,8 @@ En el proyecto actual hay actualmente 5 módulos de implementación para hacer f
 4. BinarySearchTreeNode: Clase que define la estructura de un nodo principal que contiene una variable para guardar el ID de la identidad, frecuencia de aparición e imagen. Posee además, dos nodos que representan los nodos hijos (izquierdo y derecho) del nodo presente.
 5. FaceDetector: Clase que detecta las caras en una imagen, teniendo métodos internos como el aumento en el contraste de la imagen.
 6. ImageCoding.h: Clase que procesa la imagen, convierte a grises, escala y ecualiza.
+7. NodoAVL: Clase que defina la estructura de un nodo principal similar al BinarySearchTreeNode, con la diferencia que éste incluye una variable indicadora de altura.
+8. AVL: Clase que implementa un árbol AVL balanceado, con sus procedimientos y métodos de balanceo, eliminación, inserción y despliegue de datos.
 
 
 ### 2.3 Implementación
@@ -124,34 +129,64 @@ La siguiente función imprime por consola el ID de las identidades identificadas
 La siguiente función imprime por consola el ID de las 5 identidades, junto a su frecuencia. La implementación radica en el uso de la recursión para la búsqueda, y la omisión de la impresión de los valores que no corresponden (no son los primeros 5) a través del parámetro entero "omision" que como entrada tiene la diferencia entre la cantidad de elementos del árbol y la cantidad de identidades a mostrar, por lo que cada vez que encuentra un nodo se descontará una unidad hasta llegar a 0, en donde ahí sí puede mostrar las identidades restantes (y como está ordenado en orden, mostrará las últimas 5 con mayor frecuencia) 
 
 ```c++
-1. void identidades(BinarySearchTreeNode* root, int *c, int omision) {
+1. void identidades(BinarySearchTreeNode* root, int *c, int omision, String *info5IdentidadesTxt, int * i) {
 2. //6-5 = 1, a partir del 1 imprime
 3.    if (root != nullptr) {
-4.        identidades(root->left, c, omision);
+4.        identidades(root->left, c, omision, info5IdentidadesTxt, i);
 5.        if (omision==0) {
-6.            cout << "ID de la imagen: " << root->key << " // Frecuencia: " << root->frec << endl;
-7.        }
-8.        else {
-9.            omision--;
-10.        }
-11.        identidades(root->right, c, omision);
-12.    }
-13. }
+6.            cout << "> ID de la imagen: " << root->key << " // Frecuencia de aparición: " << root->frec << endl;
+7.            (*info5IdentidadesTxt) = (*info5IdentidadesTxt) + "\n ID: " + to_string(root->key) + ", Frecuencia de aparición: " + to_string(root->frec) + " veces";
+8.            //Mat imgen = ;
+9.            *i = *i + 1;
+10.            imwrite("./identidades_mas_frecuentes/identidad_ID_"+ /*to_string(*i) + "_ID_" + */ to_string(root->key) + ".png", root->image);
+11.            imshow("Rostros mas frecuentes", root->image);
+12.            waitKey(1000);
+13.        }
+14.        else {
+15.            omision--;
+16.        }
+17.        identidades(root->right, c, omision, info5IdentidadesTxt, i);
+18.    }
 ```
 
-La siguiente función inserta los nodos obtenidos del árbol "ArbolFrecuencias" de manera ordenada (InOrder) en el árbol "ArbolOrdenado" que está ordenado por frecuencias. Se utiliza la misma funcionalidad de la función "enOrden".
+La siguiente función inserta los nodos obtenidos del árbol "ArbolFrecuencias" de manera ordenada (InOrder) en el árbol "ArbolOrdenado" que está ordenado por frecuencias. Se utiliza la misma funcionalidad de la función "enOrden". Además, inserta la info de cada nodo de estos árboles en el árbol balanceado AVL definido.
 
 ```c++
-1. void insertarNodosOrdenadosFrecuencia(BinarySearchTreeNode* &root, ArbolOrdenado &aoo) {
-2.     if (root != nullptr) {
-3.         insertarNodosOrdenadosFrecuencia(root->left, aoo);
-4.        cout << "[Insertando] ID: " << root->key << " // Frecuencia: " << root->frec << endl;
+1. void insertarNodosOrdenadosFrecuencia(BinarySearchTreeNode* &root, ArbolOrdenado &aoo, ArbolAVL &avl) {
+2.    if (root != nullptr) {
+3.        insertarNodosOrdenadosFrecuencia(root->left, aoo, avl);
+4.        //cout << "[Insertando] ID: " << root->key << " // Frecuencia: " << root->frec << endl;
 5.        aoo.insert(aoo.root,root);
-6.        cout << "[Insertado] ID: " << aoo.root->key << " // Frecuencia: " << aoo.root->frec << endl;
-7.
-8.        insertarNodosOrdenadosFrecuencia(root->right, aoo);
-9.    }
-10. }
+6.        //cout << "INSERTANDO EN ARBOL AVL !!!!!!!!!!!" << endl;
+7.        avl.insertar(root->key, root->frec, root->frames, root->image);
+8.        //cout << "[Insertado] ID: " << avl.root->key << " // Frecuencia: " << avl.root->frec <<" // Frames: " << endl;
+9.        insertarNodosOrdenadosFrecuencia(root->right, aoo, avl);
+10.    }
+11. }
+```
+
+La siguiente función crea un archivo txt en el directorio "identidades_registros_txt" que guarda la información de las identidades totales registradas en el metraje, y las identidades con mayor frecuencia de aparición. Son dos archivos por separado, los cuales se crearán según la indicación del string "decisión" , en donde si dice "total" se almacenarán **todas** las identidades en una carpeta, mientras que, si es al contrario, se guardarán en una carpeta aparte a la anterior en un archivo txt distinto, teniendo un mejor orden al momento de guardar estos archivos.
+
+```c++
+1. void escribirTxt(String s, String decision) {
+2.    ofstream archivo;
+3.    string info_principal;
+4.    if (decision == "total") {
+5.        archivo.open("./identidades_registros_txt/registro_identidades.txt", ios::out);
+6.        info_principal = "---------- Registro total de identidades ----------";
+7.    }
+8.    else {
+9.        archivo.open("./identidades_registros_txt/registro_identidades_frecuentes.txt", ios::out);
+10.        info_principal = "---------- Registro de identidades frecuentes ----------";
+11.    }
+12.    if (archivo.fail()) {
+13.        cout << "No se pudo abrir el archivo" << endl;
+14.        exit(1);
+15.    }
+16.    archivo << info_principal;
+17.    archivo << s;
+18.    archivo.close();
+19. }
 ```
 
 
@@ -184,9 +219,12 @@ El siguiente código fue utilizado para la detección de identidades, el cual ut
 
 ## 3. Resultados obtenidos
 
+Los resultados obtenidos coincidieron con el objetivo principal de la confección y modelamiento del programa, pues se logró diseñar un sistema de identificación de rostros, el cual guarde la información de cada identidad, su frecuencia de aparición en el metraje y la asignación de una ID para una mayor facilidad de reconocimiento. Esto, a través de estructuras de datos relacionadas al curso en sí, las cuales fueron óptimas para realizar el taller, pudiendo identificar y relacionar cada árbol estudiado para ver en qué situación se podía aplicar de una manera más eficiente.
+
 
 ## 4. Conclusiones
 
+Si bien, la realización del programa se vio obstaculizada por un difícil ámbito acádemico que conllevó interrupciones abruptas en cuanto a trabajo y a las retroalimentaciones constantes en lo que avanzaba el curso, los objetivos de aprendizajes planteados inicialmente y la introducción a un nuevo concepto que respecta a reconocimiento facial fueron completados con mucho éxito. Se logró construir, a pesar de no tener alguna base anterior relacionada al mundo de la identificación de rostros, un modelo el cual completa su objetivo principal, que es identificar rostros de un metraje y almacenar la información obtenida de éste en distintas estructuras de datos, como listas enlazadas y árboles binarios, junto a sus derivados. En la realización de diseños y construcciones de prototipos, se pudieron identificar las diferencias de cada estructura de datos, pudiendo identificar cuál era la más indicada para cada situación, simplificando de mejor forma cada análisis e inserción de datos durante la ejecución del programa. Como análisis final, se invita a investigar y experimentar con librerías que parecen fuera de alcance por, tal vez, una complejidad elevada y una nula práctica al respecto, sin embargo, a través de las librerías y archivos ya entrenados, se hace menos complicado y más entretenido de lo que parece, por lo que solo queda experimentar con el mundo de la identificación, no sólo facial, sino a otros mecanismos de identificación, ya sea seguimiento de distintos objetios, sensores de movimiento, confección de objetivos pivot, u otros simuladores referidos a la identificación y movimiento.
 # Anexos
 
 
