@@ -1,0 +1,6 @@
+---------- Registro de identidades frecuentes ----------
+ ID: 2, Frecuencia de aparición: 2 veces
+ ID: 4, Frecuencia de aparición: 3 veces
+ ID: 1, Frecuencia de aparición: 4 veces
+ ID: 5, Frecuencia de aparición: 5 veces
+ ID: 6, Frecuencia de aparición: 6 veces
