@@ -4,8 +4,7 @@
 
 | Fecha  | Objetivo  | Trabajo Realizado | Responsable | Tiempo Estimado | Tiempo Real |
 |--------|-----------|-------------------|-------------|-----------------|-------------|
-  | 06/NOV | OBJ-07    | Estudio sobre el funcionamiento de árboles (búsqueda, inserción y recorrido) | Tamara Ossandón | 2 horas    | 6 horas |
-  | 11/NOV | OBJ-01 | Retroalimentación de funcionalidad de OpenCV | Sebastián Ledezma y Tamara Ossandón | 1 horas | 2 horas |
-| 30/NOV | OBJ-07   | Implementar árbol que contenga cada identidad con su frecuencia e ID asociado | Tamara Ossandón |  3 horas | 6 horas |
-| 02/DIC | OBJ-06 | Implementación de la obtención de las 5 identidades con mayores apariciones | Sebastián Ledezma | 1 horas | 3 horas |
-| 03/DIC | OBJ-08 | Comprobar el funcionamiento del programa actual con distintos archivos multimedia | Sebastián Ledezma | 1 horas | 1 horas |
+  | 15/DIC | OBJ-07    | Retroalimentación sobre el funcionamiento de árboles AVL (búsqueda, inserción y recorrido) | Tamara Ossandón | 2 horas    | 3 horas |
+  | 16/DIC | OBJ-01 | Retroalimentación de funcionalidad de OpenCV | Sebastián Ledezma | 1 horas | 2 horas |
+| 18/DIC | OBJ-07   | Implementación de árbol AVL referente a las identidades | Tamara Ossandón |  2 horas | 6 horas |
+| 18/DIC | OBJ-07 | Implementar sistema de guardado de información en archivos de texto | Sebastián Ledezma | 2 horas | 3 horas |
