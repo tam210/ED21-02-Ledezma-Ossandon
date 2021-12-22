@@ -225,7 +225,6 @@ Los resultados obtenidos coincidieron con el objetivo principal de la confecció
 ## 4. Conclusiones
 
 Si bien, la realización del programa se vio obstaculizada por un difícil ámbito acádemico que conllevó interrupciones abruptas en cuanto a trabajo y a las retroalimentaciones constantes en lo que avanzaba el curso, los objetivos de aprendizajes planteados inicialmente y la introducción a un nuevo concepto que respecta a reconocimiento facial fueron completados con mucho éxito. Se logró construir, a pesar de no tener alguna base anterior relacionada al mundo de la identificación de rostros, un modelo el cual completa su objetivo principal, que es identificar rostros de un metraje y almacenar la información obtenida de éste en distintas estructuras de datos, como listas enlazadas y árboles binarios, junto a sus derivados. En la realización de diseños y construcciones de prototipos, se pudieron identificar las diferencias de cada estructura de datos, pudiendo identificar cuál era la más indicada para cada situación, simplificando de mejor forma cada análisis e inserción de datos durante la ejecución del programa. Como análisis final, se invita a investigar y experimentar con librerías que parecen fuera de alcance por, tal vez, una complejidad elevada y una nula práctica al respecto, sin embargo, a través de las librerías y archivos ya entrenados, se hace menos complicado y más entretenido de lo que parece, por lo que solo queda experimentar con el mundo de la identificación, no sólo facial, sino a otros mecanismos de identificación, ya sea seguimiento de distintos objetios, sensores de movimiento, confección de objetivos pivot, u otros simuladores referidos a la identificación y movimiento.
-
 # Anexos
 
 
@@ -303,4 +302,8 @@ Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por
 
 1. Computer Vision Zone. (2021, 14 julio). OpenCV C++. https://www.computervision.zone/courses/opencv-cv/
 2. Márquez, J. C. C. (2019, 6 mayo). Instalar OpenCV con Visual Studio 2017. aprendiendo ingeniería. https://aprendiendoingenieria.es/instalar-opencv-con-visual-studio-2017/
+
+
+
+
 
