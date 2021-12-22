@@ -1,0 +1,9 @@
+﻿  main.cpp
+C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\probandoTALLER\BinarySearchTree.h(16,32): warning C4099: 'BinarySearchTreeNode': type name first seen using 'class' now seen using 'struct'
+C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\probandoTALLER\BinarySearchTreeNode.h(9): message : see declaration of 'BinarySearchTreeNode'
+C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\probandoTALLER\ArbolFrecuencias.h(21,32): warning C4099: 'BinarySearchTreeNode': type name first seen using 'class' now seen using 'struct'
+C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\probandoTALLER\BinarySearchTreeNode.h(9): message : see declaration of 'BinarySearchTreeNode'
+C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\probandoTALLER\ArbolOrdenado.h(11,32): warning C4099: 'BinarySearchTreeNode': type name first seen using 'class' now seen using 'struct'
+C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\probandoTALLER\BinarySearchTreeNode.h(9): message : see declaration of 'BinarySearchTreeNode'
+C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\probandoTALLER\main.cpp(136,9): warning C4101: 'f': unreferenced local variable
+  probandoTALLER.vcxproj -> C:\Users\jimimix\Desktop\PRUEBA TALLER\probandoTALLER\x64\Debug\probandoTALLER.exe
